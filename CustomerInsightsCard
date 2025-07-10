@@ -1,0 +1,135 @@
+CustomerInsightsCard = 
+"
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.movCard, .movCard * {
+  box-sizing: border-box;
+  transition: all 400ms ease-in-out;
+}
+
+.movCard {
+  --firstColor: #007ACC;
+  --secondColor: #00B4D8;
+  --imageOffset: -50px;
+  width: 720px;
+  height: 350px;
+  border-radius: 20px;
+  background: linear-gradient(to right, var(--firstColor), var(--secondColor));
+  position: relative;
+  margin: 40px;
+  padding: 40px 40px 20px 40px; /* top right bottom left */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.movCard--content {
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateX(30%);
+  opacity: 0;
+}
+
+.movCard--tag {
+  margin: 0 0 5px;
+  color: #FFF;
+  font-size: .8em;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.movCard--title {
+  margin: 0 0 15px;
+  color: #FFF;
+  font-size: 2.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.movCard--description {
+  margin: 0 0 15px;
+  color: #FFF;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.movCard--button {
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .8em;
+  line-height: 1em;
+  text-decoration: none;
+  background: #FFF;
+  padding: 15px 20px;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.movCard--image {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  height: 400px;
+  transform: translateX(50%);
+}
+
+.movCard:hover .movCard--image {
+  right: var(--imageOffset);
+  height: 450px;
+  max-height: 100%;
+  transform: translateX(0);
+}
+
+.movCard:hover .movCard--content {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  .movCard {
+    height: auto;
+    padding: 40px 40px calc(350px + 40px) 40px;
+    margin: 40px 20px;
+  }
+
+  .movCard--content {
+    opacity: 1;
+    width: 100%;
+    transform: translateX(0%);
+  }
+
+  .movCard--image {
+    height: 350px;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+  }
+}
+</style>
+
+<div class='movCard'>
+  <div class='movCard--content'>
+    <h3 class='movCard--tag'>Data Analysis</h3>
+    <h2 class='movCard--title'>Customer Insights</h2>
+    <div class='movCard--description'>
+      Understand your audience with real-time metrics and interactive dashboards.
+    </div>
+    <a href='#' class='movCard--button'>Explore Data</a>
+  </div>
+  <img class='movCard--image' src='https://cdn-icons-png.flaticon.com/512/2910/2910768.png' alt='Customer Insights' />
+</div>
+"
