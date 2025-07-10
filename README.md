@@ -77,7 +77,5 @@ This template helps you display:
 - Original base style adapted from **[alexkleinubing’s CodePen](https://codepen.io/alexkleinubing/pen/GRjKEZJ)** — thank you for the creative inspiration!
 - CSS hover transitions kept minimal for Service compatibility.
 
----
 
-## 📂 Repo Structure Example
 
